@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS `seguridad`;
+USE `seguridad`;
+
+CREATE TABLE `seguridad`.`usuario` (
+  `ID` INT NOT NULL,
+  `USERNAME` VARCHAR(45) NULL,
+  `PASSWORD` VARCHAR(255) NULL,
+  PRIMARY KEY (`ID`));
+
+INSERT INTO `seguridad`.`usuario` (`ID`, `USERNAME`, `PASSWORD`) VALUES (1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'), (2, 'user', '04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb');
