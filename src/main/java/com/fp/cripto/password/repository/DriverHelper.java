@@ -1,4 +1,6 @@
-package com.fp.cripto.hash.repository;
+package com.fp.cripto.password.repository;
+
+import com.fp.cripto.common.PropertiesHandler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,8 +12,8 @@ import java.sql.SQLException;
 public class DriverHelper {
 
 	public static Connection getConnection() throws SQLException { 
-		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/seguridad?serverTimezone=UTC",
-			"root", "castelao");
+		Connection conn = DriverManager.getConnection(PropertiesHandler.get("db.url"),
+				PropertiesHandler.get("db.user"), PropertiesHandler.get("db.password"));
 		return conn;
 	}
 }

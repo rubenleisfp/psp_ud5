@@ -1,15 +1,9 @@
-package com.fp.cripto.hash.repository;
+package com.fp.cripto.password.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 
 
 public class UserJdbcDao implements UserDao {

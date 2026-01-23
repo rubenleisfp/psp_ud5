@@ -1,4 +1,4 @@
-package com.fp.cripto.hash.repository;
+package com.fp.cripto.password.repository;
 
 public class User {
 
