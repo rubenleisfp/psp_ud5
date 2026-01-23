@@ -20,19 +20,6 @@ public class CifradoServiceAES implements CifradoService {
 
     @Override
     public boolean checkPassword(String inputPassword, String passwordCifrado) {
-        Cipher cipher = null;
-        try {
-            SecretKey secretKey = new SecretKeySpec(clave.getBytes(), "AES");
-            cipher = Cipher.getInstance("AES");
-            cipher.init(ENCRYPT_MODE, secretKey);
-            byte[] inputPasswordCifrado = cipher.doFinal(inputPassword.getBytes());
-            String inputPasswordCifradoString = Base64.getEncoder().encodeToString(inputPasswordCifrado);
-            return inputPasswordCifradoString.equals(passwordCifrado);
-
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | BadPaddingException |
-                 IllegalBlockSizeException e) {
-            throw new RuntimeException(e);
-        }
-
+        throw new UnsupportedOperationException("A implementar por el estudiante");
     }
 }
