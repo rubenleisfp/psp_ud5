@@ -3,6 +3,7 @@ package com.fp.cripto.password;
 import com.fp.cripto.password.repository.UserJdbcDao;
 import com.fp.cripto.password.service.UserService;
 import com.fp.cripto.password.service.impl.CifradoServiceAES;
+import com.fp.cripto.password.service.impl.CifradoServiceHash;
 
 
 import java.util.Scanner;
@@ -18,8 +19,8 @@ public class AppPassword {
     }
 
     private void cfg() {
-        //userService = new UserService(new UserJdbcDao(), new CifradoServiceHash());
-        userService = new UserService(new UserJdbcDao(), new CifradoServiceAES());
+        userService = new UserService(new UserJdbcDao(), new CifradoServiceHash());
+        //userService = new UserService(new UserJdbcDao(), new CifradoServiceAES());
     }
 
     private void run() {
